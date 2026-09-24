@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="script.js" defer></script> -->
+    <!-- <script src="script1.js" defer></script> -->
+    <!-- <script src="script2.js" defer></script> -->
+    <!-- <script src="script3.js" defer></script> -->
+    <!-- <script src="script4.js" defer></script> -->
+    <!-- <script src="script5.js" defer></script> -->
+    <!-- <script src="script6.js" defer></script> -->
+    <!-- <script src="script7.js" defer></script> -->
+    <!-- <script src="script8.js" defer></script> -->
+    <!-- <script src="practice.js"></script> -->
+    <!-- <script src="practice1.js"></script> -->
+    <!-- <script src="callback.js" defer></script> -->
+    <!-- defer ensures:
+           Script executes after the DOM is ready
+           Maintains order if multiple scripts
+           Non-blocking 
+    -->
+    <!-- <script src="eventLoop.js"></script> -->
+    <!-- <script src="ArrayPractice.js" ></script> -->
+    <!-- <script src="SetTimeout.js" ></script> -->
+    <!-- <script src="HignOrderFunction.js" ></script> -->
+    <!-- <script src="MapFilterReduce.js" ></script>     -->
+    <!-- <script src="PrototypingAndPrototyple.js" ></script> -->
+    <!-- <script src="Callback()Hell.js" ></script> -->
+    <!-- <script src="Promises.js" ></script> -->
+    <!-- <script src="async_await.js" ></script> -->
+    <!-- <script src="PromiseApi.js" ></script> -->
+    <!-- <script src="this_Keyword.js" ></script> -->
+    <script src="InterViewPractice.js"></script>
+    <!-- <script src="StringsOperations.js"></script> -->
+    <!-- <script src="Object.js" defer></script> -->
+
+
+
+
+    <!-- <style>
+        div {
+            min-width: 100px;
+            min-height: 100px;
+            padding: 30px;
+            border: 1px solid black
+        }
+    </style> -->
+
+</head>
+
+<body>
+    Hello Javascript Preparation
+    <!-- <button id="clickMe">Click me</button> -->
+
+    <!-- /* this is inside DOM */ -->
+    <!--  <button onclick="alert(this)">Click me to check 'this' value</button> -->
+    <!-- <button onclick="alert(this.tagName)">Click me to check 'this' value</button> --> <!-- output: BUTTON -->
+    <!-- output: [object HTMLButtonElement] -->
+
+
+
+    <!-- Event Bubbling and Event Capturing -->
+    <!--  <div id="grandparent">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div> -->
+
+    <!-- Event Delegation -->
+    <!--  <div id="category">
+        <ul>
+            <li id="laptop">Laptop</li>
+            <li id="mobile">Mobile</li>
+            <li id="watch">Watch</li>
+            <li id="desktop">Desktop</li>
+        </ul>
+    </div> -->
+
+    <script>
+        /*   document.querySelector("#category")
+              .addEventListener("click", (e) => {
+                  if (e.target.tagName === "LI") {
+                      console.log("Item clicked:", e.target.id);
+                      // navigate to a new page
+                      window.location.href = "/" + e.target.id;
+                  }
+              }); */
+    </script>
+
+    <script>
+        // document.querySelector("#grandparent")
+        //     .addEventListener('click', (e) => {
+        //         console.log("GrandParent Clicked")
+        //         e.stopPropagation()
+        //     }, true) /* third argument is named useCapture and by default it is false means Event Bubbling work else Event Capture */
+        // document.querySelector("#parent")
+        //     .addEventListener('click', (e) => {
+        //         console.log("Parent Clicked")
+        //         e.stopPropagation() /* it is used to stop  propogation if all false and click on child then show child => Parent (Stop)  */
+        //     }, true) /* third argument is named useCapture and by default it is false means Event Bubbling work else Event Capture */
+        // document.querySelector("#child")
+        //     .addEventListener('click', (e) => {
+        //         console.log("Child Clicked")
+        //         // e.stopPropagation()
+        //     }, true) /* third argument is named useCapture and by default it is false means Event Bubbling work else Event Capture */
+
+        /* According to w3c and control Event propogation */
+
+        /* if third argument true of all Event true
+        Output:-  Event Bubbling Order Bottom to Top child => Parent => Grand Parent if false or default false
+                Child Clicked
+                Parent Clicked
+                GrandParent Clicked
+               
+            if third argument false of all Event true
+        Output: Event Capturing order Top to Bottom if we click child GrandParent => Parent => Child if true   
+                GrandParent Clicked
+                Parent Clicked
+                Child Clicked
+
+                if third argument false of secand Event false and other first and last true and click on child 
+        Output: Event Capturing order Top to Bottom if we click child GrandParent => Parent => Child if true   
+                GrandParent Clicked
+                Child Clicked
+                Parent Clicked
+        */
+    </script>
+</body>
+
+</html>
