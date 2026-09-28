@@ -46,6 +46,7 @@ function findFibonacciUsingIterationApproach(n) {
 function fibonacciNumberUsingRecursion(n) {
     if (n <= 0) return 0;
     if (n === 1) return 1;
+    /* or*/ /* if(n <= 1) return n */
 
     return fibonacciNumberUsingRecursion((n - 1)) + fibonacciNumberUsingRecursion((n - 2))
 }
