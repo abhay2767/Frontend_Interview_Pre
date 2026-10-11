@@ -9,9 +9,11 @@ function mergeHelper(left, right) {
         if (left[i] < right[j]) {
             result.push(left[i])
             i++;
+            /* or res.push(leftArr[i++]) */
         } else {
             result.push(right[j])
-            j++
+            j++;
+            /* or res.push(rightArr[j++]) */
         }
     }
     return [...result, ...left.slice(i), ...right.slice(j)]
@@ -19,7 +21,7 @@ function mergeHelper(left, right) {
 
 function mergeSort(arr) {
     if (arr.length <= 1) return arr /* Base Case when to stop */
-    let mid = arr.length / 2;
+    let mid = Math.floor(arr.length / 2);
     let leftside = mergeSort(arr.slice(0, mid))
     let rightside = mergeSort(arr.slice(mid))
     return mergeHelper(leftside, rightside)
